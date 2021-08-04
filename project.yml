@@ -1,0 +1,9 @@
+name: YandexMapsMobile
+
+targets:
+    Resources:
+    type: framework
+    platform: iOS
+    sources:
+        - Sources
+
