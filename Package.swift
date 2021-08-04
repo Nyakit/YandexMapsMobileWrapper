@@ -8,8 +8,8 @@ let package = Package(
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
-            name: "YandexMapsMobileWrapper",
-            targets: ["YandexMapsMobileWrapper"]),
+            name: "YandexMapsMobile",
+            targets: ["YandexMapsMobile"]),
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
