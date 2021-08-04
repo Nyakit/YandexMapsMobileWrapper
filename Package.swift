@@ -8,8 +8,8 @@ let package = Package(
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
-            name: "YandexMapsMobile",
-            targets: ["YandexMapsMobile"]),
+            name: "YandexMapsMobileWrapper",
+            targets: ["YandexMapsMobileWrapper"]),
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -18,7 +18,7 @@ let package = Package(
     targets: [
         //.binaryTarget(name: "YandexMapsMobileBinary", path: "YandexMapsMobile.xcframework"),
         .binaryTarget(
-            name: "YandexMapsMobile",
+            name: "YandexMapsMobileBinary",
             url: "https://github.com/Nyakit/YandexMapsMobileWrapper/releases/download/1.0.0/YandexMapsMobile.xcframework.zip",
             checksum: "90b4402623a7a10ec57538db320ff132414a59e8a517e205181d8ae97f7c166e"
         ),
@@ -27,9 +27,9 @@ let package = Package(
         
         .target(
             name: "YandexMapsMobileWrapper",
-//            dependencies: [
-//                .target(name: "YandexMapsMobileBinary"),
-//            ],
+            dependencies: [
+                .target(name: "YandexMapsMobileBinary"),
+            ],
             linkerSettings: [
                 .linkedFramework("CoreLocation"),
                 .linkedFramework("CoreTelephony"),
