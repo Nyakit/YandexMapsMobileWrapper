@@ -29,7 +29,7 @@ let package = Package(
                 .linkedFramework("CoreTelephony"),
                 .linkedFramework("SystemConfiguration"),
                 .linkedLibrary("c++"),
-               // .unsafeFlags(["-ObjC"]),
+                .unsafeFlags(["-ObjC"]),
             ]),
     ]
 )
